@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+span {
+  font-size: 22px;
+  line-height: 36px;
+  initial-letter: 25px;
+  text-transform: capitalize;
+  color: #113893;
+  margin-left: 1%;
+}
+
+input {
+  width: 98%;
+  margin: 0 auto;
+  height: 30px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #73d0f8;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.text {
+  font-size: 22px;
+  line-height: 36px;
+  initial-letter: 25px;
+  text-transform: capitalize;
+  color: #113893;
+}
+
+.btn {
+  border: 1px solid gray;
+  padding: 10px;
+  color: #113893;
+  background-color: #73d0f8;
+}

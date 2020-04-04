@@ -1,0 +1,75 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Customer List</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container mt-5 text-center title">
+        <h2>Welcome to The Customer List App</h2>
+        <a href="/customers/">All customers registered in the system</a>
+    </div>
+    <div class="container">
+        <div th:unless="${#lists.isEmpty(customers)}">
+        <dl th:each="customer : ${customers}">
+             <div class="form-group">
+                 <dt class="form">
+                    <span>First Name: <label for="firstName"></label> </span><span th:text="${customer.firstName}"></span>
+                    <input type="text" class="form-control" name="firstName" id="firstName"><br/>
+                </dt>
+            </div>
+
+            <div class="form-group">
+                <dt class="form">
+                    <span>Last Name: <label for="lastName"></label> </span><span th:text="${customer.lastName}"></span>
+                    <input type="text" class="form-control" name="lastName" id="lastName"><br/>
+                </dt>
+            </div>
+
+            <div class="form-group">
+                <dt class="form">
+                    <span>Email address: <label for="emailAddress"></label> </span><span th:text="${customer.emailAddress}"></span>
+                    <input type="text" class="form-control" name="emailAddress" id="emailAddress"><br/>
+                </dt>
+            </div>
+
+            <div class="form-group">
+                <dt class="form">
+                    <span>Phone: <label for="mobilePhone"></label> </span><span th:text="${customer.mobilePhone}"></span>
+                    <input type="text" class="form-control" name="mobilePhone" id="mobilePhone"><br/>
+                </dt>
+            </div>
+
+            <div class="form-group">
+                <dt class="form">
+                    <span>City: <label for="city"></label> </span><span th:text="${customer.city}"></span>
+                    <input type="text" class="form-control" name="city" id="city"><br/>
+                </dt>
+            </div>
+            
+            <div class="form-group">
+                <dt class="form">
+                    <span>Job Title: <label for="jobTitle"></label> </span><span th:text="${customer.jobTitle}"></span>
+                    <input type="text" class="form-control" name="jobTitle" id="jobTitle"><br/>
+                </dt>
+            </div>
+        </dl>
+    </div>
+    <div th:if="${#lists.isEmpty(customers)}" class="text-center button">
+        <p class="text">No customers registered in the system</p>
+        <a href="/customers/add" class="btn btn-success">Add new customers</a>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</html>
